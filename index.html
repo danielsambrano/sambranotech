@@ -1,96 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sambrano Technology Services | Cybersecurity, IT & AI Solutions</title>
+  <meta name="description" content="Professional cybersecurity, IT support, cloud, networking and AI solutions for homes, professionals and businesses across Trinidad and Tobago.">
+  <meta name="author" content="Sambrano Technology Services">
+  <meta name="theme-color" content="#070707">
 
-    <title>Sambrano Technology Services | Trusted Technology. Intelligent Solutions.</title>
+  <meta property="og:title" content="Sambrano Technology Services">
+  <meta property="og:description" content="Trusted Technology. Intelligent Solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sambranotech.com">
+  <meta property="og:image" content="https://sambranotech.com/assets/sambrano-primary-logo.png">
 
-    <meta name="description"
-        content="Professional Cybersecurity, AI, IT Support and Technology Consulting services throughout Trinidad & Tobago.">
-
-    <meta name="keywords"
-        content="Cybersecurity Trinidad, IT Support Trinidad, AI Consulting, Sambrano Technology Services">
-
-    <meta name="author" content="Daniel Staffon Sambrano">
-
-    <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-
-            background:#090909;
-
-            color:white;
-
-            font-family:Arial, Helvetica, sans-serif;
-
-            display:flex;
-
-            justify-content:center;
-
-            align-items:center;
-
-            height:100vh;
-
-            text-align:center;
-
-        }
-
-        h1{
-
-            font-size:4rem;
-
-            letter-spacing:3px;
-
-            color:#D4AF37;
-
-        }
-
-        h2{
-
-            font-size:1.8rem;
-
-            margin-top:20px;
-
-            color:white;
-
-            font-weight:300;
-
-        }
-
-        p{
-
-            margin-top:30px;
-
-            font-size:1.2rem;
-
-            color:#bdbdbd;
-
-        }
-
-    </style>
-
+  <link rel="icon" type="image/png" href="assets/sambrano-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sambrano Technology Services home">
+      <img src="assets/sambrano-icon.png" alt="" class="brand-icon">
+      <span>
+        <strong>SAMBRANO</strong>
+        <small>Technology Services</small>
+      </span>
+    </a>
 
-<div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
 
-<h1>SAMBRANO</h1>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="https://wa.me/18687757799?text=Hello%20Sambrano%20Technology%20Services%2C%20I%20would%20like%20to%20request%20a%20quote." target="_blank" rel="noopener">Request a Quote</a>
+    </nav>
+  </header>
 
-<h2>Technology Services</h2>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
 
-<p>Trusted Technology. Intelligent Solutions.</p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Cybersecurity • IT Services • AI Solutions</p>
+        <h1>Secure today.<br><span>Ready for tomorrow.</span></h1>
+        <p class="hero-text">
+          Professional technology solutions for homes, professionals and businesses across Trinidad and Tobago.
+          We make technology safer, simpler and more reliable.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/18687757799?text=Hello%20Sambrano%20Technology%20Services%2C%20I%20would%20like%20to%20request%20a%20quote." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="button button-secondary" href="#services">Explore Services</a>
+        </div>
+        <div class="trust-strip">
+          <span>Registered in Trinidad & Tobago</span>
+          <span>Security-first approach</span>
+          <span>Local & remote support</span>
+        </div>
+      </div>
 
-</div>
+      <div class="hero-visual reveal">
+        <img src="assets/sambrano-primary-logo.png" alt="Sambrano Technology Services logo">
+      </div>
+    </section>
 
+    <section class="section section-dark" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>Technology solutions built around your needs.</h2>
+        <p>Start with one problem. We will help you identify the right solution and deliver it professionally.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">🛡️</div>
+          <h3>Cybersecurity</h3>
+          <p>Security assessments, malware protection, email security, awareness training and practical risk reduction.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">💻</div>
+          <h3>IT Support</h3>
+          <p>Computer repairs, upgrades, software installation, troubleshooting and dependable remote or on-site support.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">🌐</div>
+          <h3>Networks & Cloud</h3>
+          <p>Wi-Fi, network setup, Microsoft 365, cloud services, backups and secure business connectivity.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">🤖</div>
+          <h3>AI & Digital Solutions</h3>
+          <p>Practical guidance on adopting AI, improving workflows and modernising business operations responsibly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="about">
+      <div class="split-panel reveal">
+        <p class="eyebrow">About Sambrano</p>
+        <h2>Enterprise thinking. Personal service.</h2>
+        <p>
+          Sambrano Technology Services was established to provide trustworthy, security-conscious technology support
+          to individuals and organisations throughout Trinidad and Tobago.
+        </p>
+        <p>
+          Founded by Daniel Staffon Sambrano, the business combines hands-on IT capability with professional experience
+          in cybersecurity governance, risk, digital trust and emerging technology.
+        </p>
+        <a class="text-link" href="#contact">Discuss your technology needs →</a>
+      </div>
+
+      <div class="principles reveal">
+        <div><strong>Integrity</strong><span>Honest advice and responsible service.</span></div>
+        <div><strong>Professionalism</strong><span>Clear communication and organised delivery.</span></div>
+        <div><strong>Security</strong><span>Protection considered in every solution.</span></div>
+        <div><strong>Service</strong><span>Solutions focused on people, not just devices.</span></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="why-us">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Why choose us</p>
+        <h2>Professional support without the unnecessary complexity.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature reveal">
+          <span>01</span>
+          <h3>Security first</h3>
+          <p>Cybersecurity is integrated into how we assess, recommend and implement technology.</p>
+        </div>
+        <div class="feature reveal">
+          <span>02</span>
+          <h3>Practical solutions</h3>
+          <p>Recommendations are based on your actual needs, budget and operating environment.</p>
+        </div>
+        <div class="feature reveal">
+          <span>03</span>
+          <h3>Local support</h3>
+          <p>Serving Sangre Grande and clients throughout Trinidad and Tobago, on-site and remotely.</p>
+        </div>
+        <div class="feature reveal">
+          <span>04</span>
+          <h3>Long-term thinking</h3>
+          <p>We aim to become a trusted technology partner, not simply complete a one-off task.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section reveal">
+      <div>
+        <p class="eyebrow">Need assistance?</p>
+        <h2>Let us take care of the technology so you can focus on what matters.</h2>
+      </div>
+      <a class="button button-primary" href="https://wa.me/18687757799?text=Hello%20Sambrano%20Technology%20Services%2C%20I%20need%20assistance%20with..." target="_blank" rel="noopener">Start a Conversation</a>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell us what you need help with.</h2>
+        <p>For the quickest response, contact us by WhatsApp or telephone.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="tel:+18687757799">
+          <span>Telephone</span>
+          <strong>775-7799</strong>
+        </a>
+        <a class="contact-card reveal" href="mailto:info@sambranotech.com">
+          <span>Email</span>
+          <strong>info@sambranotech.com</strong>
+        </a>
+        <a class="contact-card reveal" href="https://wa.me/18687757799" target="_blank" rel="noopener">
+          <span>WhatsApp</span>
+          <strong>Message us directly</strong>
+        </a>
+        <div class="contact-card reveal">
+          <span>Service area</span>
+          <strong>Trinidad & Tobago</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/sambrano-icon.png" alt="">
+      <div>
+        <strong>Sambrano Technology Services</strong>
+        <span>Trusted Technology. Intelligent Solutions.</span>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>Registered Business Identifier: 6542991</span>
+      <span>© <span id="year"></span> Sambrano Technology Services</span>
+    </div>
+  </footer>
 </body>
-
 </html>
