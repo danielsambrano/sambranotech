@@ -1,20 +1,5 @@
-# Sambrano Technology Services Website
-
-Static website for **Sambrano Technology Services**, deployed using GitHub and Cloudflare Pages.
-
-## Upload to GitHub
-
-Upload these items to the root of the `sambranotech` repository:
-
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/` folder
-
-Commit the files to the `main` branch. Cloudflare Pages should redeploy automatically.
-
-## Contact information included
-
-- Telephone / WhatsApp: 775-7799
-- Email: info@sambranotech.com
-- Website: sambranotech.com
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Privacy Notice | Sambrano Technology Services</title><meta name="description" content="Privacy notice for the Sambrano Technology Services website and business enquiries."><meta name="theme-color" content="#070707"><link rel="canonical" href="https://sambranotech.com/privacy.html"><meta name="robots" content="index,follow"><link rel="icon" type="image/png" href="assets/sambrano-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script defer src="script.js"></script></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><a class="brand" href="/" aria-label="Sambrano Technology Services home"><img src="assets/sambrano-icon.png" alt="" class="brand-icon" width="44" height="44"><span><strong>SAMBRANO</strong><small>Technology Services</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span><span></span></button><nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="services.html">Services</a><a href="about.html">About</a><a href="/#why-us">Why Us</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html#quote">Request a Quote</a></nav></header>
+<main id="main-content"><section class="page-hero"><p class="eyebrow">Privacy</p><h1>Privacy notice</h1><p>How Sambrano Technology Services handles information submitted through this website and during initial business enquiries.</p></section><section class="section"><div class="prose"><p><strong>Last updated: 17 July 2026</strong></p><h2>Information we may receive</h2><p>When you contact STS by telephone, email or WhatsApp, you may provide your name, contact details, organisation, location and information about the service you require. Please do not submit passwords, authentication codes, payment information or unnecessary sensitive personal information through an initial enquiry.</p><h2>How information is used</h2><p>Information is used to respond to enquiries, prepare quotations, provide requested services, maintain appropriate business records and protect the security and integrity of our operations.</p><h2>Sharing</h2><p>STS does not sell personal information. Information may be processed by service providers used for website hosting, communications or business administration, or disclosed where required by law. Only information reasonably necessary for the relevant purpose should be shared.</p><h2>Website services</h2><p>This website is hosted through Cloudflare Pages and uses Google Fonts. Contact links may direct you to your telephone, email application or WhatsApp, where the privacy practices of the relevant provider apply. The website does not currently use advertising trackers or accept payments.</p><h2>Retention and security</h2><p>Information is retained only for as long as reasonably necessary for the enquiry, service, recordkeeping or legal purpose involved. Reasonable organisational and technical safeguards are used, but no internet transmission method can be guaranteed to be completely secure.</p><h2>Your enquiry</h2><p>To ask a privacy question or request correction of information provided to STS, contact <a class="text-link" href="mailto:info@sambranotech.com">info@sambranotech.com</a>.</p></div></section></main>
+<footer class="site-footer"><div class="footer-brand"><img src="assets/sambrano-icon.png" alt="" width="46" height="46"><div><strong>Sambrano Technology Services</strong><span>Trusted Technology. Intelligent Solutions.</span></div></div><nav class="footer-links" aria-label="Footer navigation"><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav><div class="footer-meta"><span>Registered Business Identifier: 6542991</span><span>© <span id="year"></span> Sambrano Technology Services</span></div></footer></body></html>
