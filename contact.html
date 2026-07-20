@@ -28,7 +28,7 @@
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="services.html">Services</a><a href="about.html">About</a><a href="/#why-us">Why Us</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="#quote">Request a Quote</a>
+      <a href="services.html">Services</a><a href="about.html">About</a><a href="knowledge.html">Knowledge</a><a href="/#why-us">Why Us</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="#quote">Request a Quote</a>
     </nav>
   </header>
 
@@ -71,22 +71,24 @@
           <div class="form-grid">
             <div class="form-field">
               <label for="full-name">Full name <span aria-hidden="true">*</span></label>
-              <input id="full-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="full-name-error">
+              <input id="full-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g., Daniel Sambrano" pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,80}" aria-describedby="full-name-hint full-name-error">
+              <span class="field-hint" id="full-name-hint">Letters, spaces, apostrophes and hyphens only.</span>
               <span class="field-error" id="full-name-error"></span>
             </div>
             <div class="form-field">
               <label for="organisation">Organisation</label>
-              <input id="organisation" name="organisation" type="text" maxlength="120" autocomplete="organization" aria-describedby="organisation-hint">
-              <span class="field-hint" id="organisation-hint">Optional</span>
+              <input id="organisation" name="organisation" type="text" maxlength="120" autocomplete="organization" placeholder="e.g., ABC Medical Practice" aria-describedby="organisation-hint">
+              <span class="field-hint" id="organisation-hint">Optional; enter your business or organisation name.</span>
             </div>
             <div class="form-field">
               <label for="email">Email address <span aria-hidden="true">*</span></label>
-              <input id="email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" aria-describedby="email-error">
+              <input id="email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="e.g., name@example.com" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" aria-describedby="email-hint email-error">
+              <span class="field-hint" id="email-hint">Use a complete email address, such as name@example.com.</span>
               <span class="field-error" id="email-error"></span>
             </div>
             <div class="form-field">
               <label for="telephone">Telephone / WhatsApp</label>
-              <input id="telephone" name="telephone" type="tel" maxlength="24" autocomplete="tel" inputmode="tel" pattern="[+0-9() .-]{7,24}" aria-describedby="telephone-hint telephone-error">
+              <input id="telephone" name="telephone" type="tel" maxlength="24" autocomplete="tel" inputmode="tel" placeholder="e.g., +1 (868) 555-0123" pattern="[+0-9() .-]{7,24}" aria-describedby="telephone-hint telephone-error">
               <span class="field-hint" id="telephone-hint">Optional; for example, +1 (868) 555-0123</span>
               <span class="field-error" id="telephone-error"></span>
             </div>
@@ -101,9 +103,15 @@
                 <option>Managed IT support</option>
                 <option>Website or digital solution</option>
                 <option>General consultation</option>
-                <option>Other</option>
+                <option value="Other">Other</option>
               </select>
               <span class="field-error" id="service-error"></span>
+            </div>
+            <div class="form-field form-field-wide" id="other-service-field" hidden>
+              <label for="other-service">Other service required <span aria-hidden="true">*</span></label>
+              <input id="other-service" name="other_service" type="text" minlength="3" maxlength="100" placeholder="e.g., Technology procurement advice" aria-describedby="other-service-hint other-service-error">
+              <span class="field-hint" id="other-service-hint">Briefly state the service you require (3–100 characters).</span>
+              <span class="field-error" id="other-service-error"></span>
             </div>
             <div class="form-field">
               <label for="contact-method">Preferred contact method <span aria-hidden="true">*</span></label>
@@ -114,14 +122,18 @@
               <span class="field-error" id="contact-method-error"></span>
             </div>
             <div class="form-field form-field-wide">
-              <label for="location">Location</label>
-              <input id="location" name="location" type="text" maxlength="120" autocomplete="address-level2" aria-describedby="location-hint">
-              <span class="field-hint" id="location-hint">Optional; town or general area is sufficient</span>
+              <label for="location">Main location area <span aria-hidden="true">*</span></label>
+              <select id="location" name="location" required autocomplete="address-level1" aria-describedby="location-hint location-error">
+                <option value="">Select your main area</option>
+                <option>Arima</option><option>Chaguanas</option><option>Couva–Tabaquite–Talparo</option><option>Diego Martin</option><option>Mayaro–Rio Claro</option><option>Outside Trinidad &amp; Tobago</option><option>Penal–Debe</option><option>Point Fortin</option><option>Port of Spain</option><option>Princes Town</option><option>San Fernando</option><option>San Juan–Laventille</option><option>Sangre Grande</option><option>Siparia</option><option>Tobago</option><option>Tunapuna–Piarco</option>
+              </select>
+              <span class="field-hint" id="location-hint">Choose the area closest to your main place of business or residence.</span>
+              <span class="field-error" id="location-error"></span>
             </div>
             <div class="form-field form-field-wide">
               <label for="message">How can we help? <span aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" required minlength="20" maxlength="2000" rows="7" aria-describedby="message-hint message-error"></textarea>
-              <div class="field-meta"><span class="field-hint" id="message-hint">Provide at least 20 characters. Do not include sensitive information.</span><span id="message-count" aria-live="polite">0 / 2000</span></div>
+              <textarea id="message" name="message" required minlength="20" maxlength="2000" rows="7" placeholder="e.g., We need help securing five business computers and our Microsoft 365 accounts." aria-describedby="message-hint message-error"></textarea>
+              <div class="field-meta"><span class="field-hint" id="message-hint">Describe the problem, number of users or devices, and desired outcome. Do not include sensitive information.</span><span id="message-count" aria-live="polite">0 / 2000</span></div>
               <span class="field-error" id="message-error"></span>
             </div>
             <div class="form-field form-field-wide consent-field">
@@ -142,7 +154,7 @@
   <footer class="site-footer">
     <div class="footer-brand"><img src="assets/sambrano-icon.png" alt="" width="46" height="46"><div><strong>Sambrano Technology Services</strong><span>Trusted Technology. Intelligent Solutions.</span></div></div>
     <nav class="footer-links" aria-label="Footer navigation"><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
-    <div class="footer-meta"><span>Registered Business Identifier: 6542991</span><span>© <span id="year"></span> Sambrano Technology Services</span></div>
+    <div class="footer-social" aria-label="Social media profiles coming soon"><span class="social-label">Follow STS</span><div class="social-placeholders"><span aria-label="Facebook coming soon" title="Facebook — coming soon">f</span><span aria-label="Instagram coming soon" title="Instagram — coming soon">◎</span><span aria-label="TikTok coming soon" title="TikTok — coming soon">♪</span></div><small>Facebook • Instagram • TikTok — coming soon</small></div><div class="footer-meta"><span>Registered Business Identifier: 6542991</span><span>© <span id="year"></span> Sambrano Technology Services</span></div>
   </footer>
 </body>
 </html>

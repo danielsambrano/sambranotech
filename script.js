@@ -56,13 +56,18 @@ if (enquiryForm) {
   const formStatus = document.getElementById('form-status');
   const messageField = document.getElementById('message');
   const messageCount = document.getElementById('message-count');
+  const serviceField = document.getElementById('service');
+  const otherServiceField = document.getElementById('other-service');
+  const otherServiceContainer = document.getElementById('other-service-field');
   const fields = [...enquiryForm.querySelectorAll('input:not([type="hidden"]), select, textarea')];
 
   const errorMessage = field => {
     const validity = field.validity;
     if (validity.valueMissing) return field.type === 'checkbox' ? 'Please confirm before submitting.' : 'This field is required.';
     if (validity.typeMismatch) return 'Enter a valid email address.';
-    if (validity.patternMismatch) return 'Enter a valid telephone number using numbers, spaces, brackets, + or -.';
+    if (validity.patternMismatch && field.id === 'full-name') return 'Use letters, spaces, apostrophes or hyphens only.';
+    if (validity.patternMismatch && field.id === 'email') return 'Enter a complete email address such as name@example.com.';
+    if (validity.patternMismatch && field.id === 'telephone') return 'Enter a valid telephone number using numbers, spaces, brackets, + or -.';
     if (validity.tooShort) return `Please enter at least ${field.minLength} characters.`;
     if (validity.tooLong) return `Please use no more than ${field.maxLength} characters.`;
     return 'Please check this field.';
@@ -86,6 +91,23 @@ if (enquiryForm) {
       if (field.getAttribute('aria-invalid') === 'true') setFieldState(field);
     });
   });
+
+  const updateOtherService = () => {
+    const showOther = serviceField?.value === 'Other';
+    if (otherServiceContainer) otherServiceContainer.hidden = !showOther;
+    if (otherServiceField) {
+      otherServiceField.required = showOther;
+      if (!showOther) {
+        otherServiceField.value = '';
+        otherServiceField.removeAttribute('aria-invalid');
+        const error = document.getElementById('other-service-error');
+        if (error) error.textContent = '';
+      }
+    }
+  };
+
+  serviceField?.addEventListener('change', updateOtherService);
+  updateOtherService();
 
   messageField?.addEventListener('input', () => {
     if (messageCount) messageCount.textContent = `${messageField.value.length} / 2000`;
@@ -122,6 +144,7 @@ if (enquiryForm) {
       }
 
       enquiryForm.reset();
+      updateOtherService();
       fields.forEach(field => {
         field.removeAttribute('aria-invalid');
         const error = document.getElementById(`${field.id}-error`);

@@ -1,0 +1,19 @@
+SAMBRANO TECHNOLOGY SERVICES — SEO UPDATE
+
+Upload the contents of this package to the root of the existing sambranotech repository. Preserve the knowledge folder and its contents. Choose to replace files when prompted.
+
+Replaced files:
+- index.html
+- styles.css
+- sitemap.xml
+
+New files:
+- cybersecurity-assessments.html
+- it-support.html
+- cloud-security.html
+- website-development.html
+- knowledge.html
+- knowledge/small-business-cybersecurity-checklist-trinidad.html
+- 404.html
+
+The package also contains the unchanged existing website files and assets so it may safely be uploaded as a complete replacement. After GitHub finishes processing the commit, allow Cloudflare Pages a few minutes to deploy, then visit sambranotech.com and test the navigation and contact form.
