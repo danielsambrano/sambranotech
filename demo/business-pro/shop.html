@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wellness Shop | Solara Health & Wellness</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <link rel="icon" href="../../assets/sambrano-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside class="demo-bar">
+    <span><strong>Business Pro Website Package</strong> · Catalogue and checkout demonstration</span>
+    <a href="https://sambranotech.com/contact.html#quote">Request a website like this</a>
+  </aside>
+  <header class="header">
+    <a class="brand" href="index.html"><span class="mark">S</span><span><strong>Solara Health</strong><small>Wellness Centre</small></span></a>
+    <button class="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+    <nav id="nav" class="nav">
+      <a href="index.html">Home</a><a href="services.html">Services</a><a href="practitioners.html">Our Team</a><a href="wellness-plans.html">Plans</a>
+      <a aria-current="page" href="shop.html">Shop <span class="cart-count">0</span></a><a href="journal.html">Journal</a><a class="nav-cta" href="booking.html">Book a Visit</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Curated wellness shop</p>
+      <h1>Thoughtful tools for everyday wellbeing.</h1>
+      <p>A realistic product catalogue and basket demonstrate the customer journey without processing a live transaction.</p>
+    </section>
+    <section class="section soft">
+      <div class="section-head"><p class="eyebrow">Featured collection</p><h2>Simple supports for calmer routines.</h2></div>
+      <div class="product-grid">
+        <article class="product"><div class="product-media"><small class="product-badge">Popular</small><div class="product-image"><img src="images/product-journal.png" alt="Deep teal wellness journal with pen" loading="lazy"></div></div><div class="product-body"><small>Daily ritual</small><h3>Solara Wellness Journal</h3><p class="product-rating" aria-label="Rated 4.8 out of 5">★★★★★ <span>4.8 (32)</span></p><p>A guided 90-day journal for goals, habits, gratitude and reflection.</p><span class="price">TT$175</span><button class="button add" data-product-id="journal" data-product-name="Solara Wellness Journal" data-product-price="175">Add to basket</button></div></article>
+        <article class="product"><div class="product-media"><div class="product-image"><img src="images/product-calm-kit.png" alt="Evening calm kit with eye mask, cup and herbal infusion" loading="lazy"></div></div><div class="product-body"><small>Rest and reset</small><h3>Evening Calm Kit</h3><p class="product-rating" aria-label="Rated 4.7 out of 5">★★★★★ <span>4.7 (21)</span></p><p>Eye mask, herbal infusion and a simple wind-down guide.</p><span class="price">TT$275</span><button class="button add" data-product-id="calm-kit" data-product-name="Evening Calm Kit" data-product-price="275">Add to basket</button></div></article>
+        <article class="product"><div class="product-media"><div class="product-image"><img src="images/product-mobility.png" alt="Resistance bands and mobility accessories" loading="lazy"></div></div><div class="product-body"><small>Movement</small><h3>Mobility Essentials</h3><p class="product-rating" aria-label="Rated 4.9 out of 5">★★★★★ <span>4.9 (18)</span></p><p>Fabric resistance bands and a beginner-friendly movement guide.</p><span class="price">TT$225</span><button class="button add" data-product-id="mobility" data-product-name="Mobility Essentials" data-product-price="225">Add to basket</button></div></article>
+        <article class="product"><div class="product-media"><small class="product-badge">New</small><div class="product-image"><img src="images/product-herbal-tea.png" alt="Herbal tea pouch with lemongrass, ginger and hibiscus" loading="lazy"></div></div><div class="product-body"><small>Natural infusion</small><h3>Island Calm Herbal Tea</h3><p class="product-rating" aria-label="Rated 4.6 out of 5">★★★★★ <span>4.6 (14)</span></p><p>A fragrant demonstration blend of lemongrass, ginger and hibiscus.</p><span class="price">TT$95</span><button class="button add" data-product-id="herbal-tea" data-product-name="Island Calm Herbal Tea" data-product-price="95">Add to basket</button></div></article>
+      </div>
+      <div class="basket-panel">
+        <div class="basket-heading"><div><small>Your demonstration basket</small><h3>Order items</h3></div><button type="button" class="text-button" data-clear-cart>Remove all</button></div>
+        <div class="basket-empty" data-cart-empty>Your basket is empty. Add a product to begin.</div>
+        <div class="basket-items" data-cart-items></div>
+        <div class="basket-footer"><div><small>Basket total</small><br><strong data-total>TT$0.00</strong></div><button class="button light" data-checkout disabled>Review Order</button></div>
+      </div>
+    </section>
+    <section class="section"><div class="notice"><strong>Demo only:</strong> Products, ratings and prices are fictional. Herbal products are shown only as catalogue examples and no health benefit is claimed. This page does not collect payment, create an order or connect to Powertranz.</div></section>
+  </main>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <div class="modal-card">
+      <div class="modal-top"><div><p class="eyebrow">Checkout demonstration</p><h2 id="checkout-title">Order summary</h2></div><button class="close" data-close aria-label="Close checkout">×</button></div>
+      <section data-checkout-step="summary">
+        <p>Confirm the fictional items below before continuing to the payment-provider stage.</p>
+        <div class="checkout-items" data-checkout-items></div>
+        <div class="checkout-total"><span>Order total</span><strong data-checkout-total>TT$0.00</strong></div>
+        <div class="actions"><button class="button secondary" data-close>Continue Shopping</button><button class="button primary" data-proceed-payment>Proceed to Payment</button></div>
+      </section>
+      <section data-checkout-step="payment" hidden>
+        <button type="button" class="back-link" data-back-summary>← Back to order summary</button>
+        <div class="payment-box"><span class="payment-lock" aria-hidden="true">✓</span><p class="eyebrow">Payment provider area</p><h3>Powertranz secure payment</h3><p>In a live, tested website, the approved Powertranz payment box or hosted payment page would appear here.</p><div class="payment-badges"><span>Powertranz</span><span>Visa</span><span>Mastercard</span><span>Secure checkout</span></div></div>
+        <div class="notice"><strong>Demonstration only:</strong> No card details can be entered, and no payment or order is created.</div>
+        <div class="actions"><button class="button primary" data-close>Return to Demo Shop</button></div>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <a class="brand" href="index.html"><span class="mark">S</span><span><strong>Solara Health</strong><small>Wellness Centre</small></span></a>
+    <nav class="footer-nav"><a href="booking.html">Booking</a><a href="contact.html">Contact</a></nav>
+    <p class="credit">Business Pro demonstration by <a href="https://sambranotech.com">Sambrano Technology Services</a> · No payments are processed.</p>
+    <p>© <span data-year></span> Solara</p>
+  </footer>
+</body>
+</html>
