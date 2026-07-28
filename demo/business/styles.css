@@ -185,3 +185,39 @@ footer p { margin: 0; color: #a9c0b9; font-size: .76rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* 2026-07-28 portrait frame repair */
+.team-preview-images {
+  min-height: 470px;
+  overflow: hidden;
+}
+.team-preview-images img,
+.team-preview-images img:nth-child(2) {
+  height: 430px;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(2.2);
+  transform-origin: center 13%;
+}
+.team-preview-images img:nth-child(1) { transform-origin: 50% 15%; }
+.team-preview-images img:nth-child(2) { transform-origin: 50% 18%; }
+.team-preview-images img:nth-child(3) { transform-origin: 50% 15%; }
+.team-photo {
+  position: relative;
+}
+.team-photo img {
+  object-position: center top;
+  transform: scale(1.55);
+  transform-origin: center 18%;
+}
+.person:hover .team-photo img {
+  transform: scale(1.6);
+}
+@media (max-width: 620px) {
+  .team-preview-images { min-height: 330px; }
+  .team-preview-images img,
+  .team-preview-images img:nth-child(2) {
+    height: 310px;
+    transform: scale(2.15);
+  }
+}
