@@ -175,3 +175,24 @@ footer p { margin: 0; color: #aeb9ca; font-size: .76rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* 2026-07-28 visual crop repair */
+.starter-image-feature {
+  min-height: clamp(440px, 42vw, 590px);
+}
+.starter-image-feature > img {
+  object-position: center 30%;
+}
+.starter-image-feature::after {
+  background: linear-gradient(90deg, rgba(13, 27, 50, .92) 0, rgba(13, 27, 50, .66) 42%, rgba(13, 27, 50, .04) 78%);
+}
+.starter-image-caption {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+@media (max-width: 600px) {
+  .starter-image-feature { min-height: 520px; }
+  .starter-image-feature > img { object-position: 62% 30%; }
+  .starter-image-caption { top: auto; bottom: 38px; transform: none; }
+}
