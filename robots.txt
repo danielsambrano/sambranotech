@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /demo/
 Allow: /
 
 Sitemap: https://sambranotech.com/sitemap.xml

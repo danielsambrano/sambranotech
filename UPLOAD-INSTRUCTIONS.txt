@@ -1,19 +1,25 @@
-SAMBRANO TECHNOLOGY SERVICES — SEO UPDATE
+SAMBRANO TECHNOLOGY SERVICES — WEBSITE PACKAGES UPDATE
 
-Upload the contents of this package to the root of the existing sambranotech repository. Preserve the knowledge folder and its contents. Choose to replace files when prompted.
+Upload the contents of this package to the root of the existing sambranotech repository. Choose to replace files when prompted.
 
-Replaced files:
-- index.html
-- styles.css
-- sitemap.xml
+This package includes:
+- The complete Sambrano Technology Services website
+- Updated Website Packages page with Starter, Business and Business Pro pricing
+- A dedicated information page for each package
+- A one-page Starter demonstration website
+- A five-page Business demonstration website
+- An eight-page interactive Business Pro demonstration website
+- Search-engine blocking for every demonstration page
 
-New files:
-- cybersecurity-assessments.html
-- it-support.html
-- cloud-security.html
-- website-development.html
-- knowledge.html
-- knowledge/small-business-cybersecurity-checklist-trinidad.html
-- 404.html
+Important:
+- Upload the files and folders at the top level of this ZIP, not the ZIP itself.
+- Preserve the folder structure.
+- The demonstration pages are located under /demo/.
+- Business Pro booking, enquiry and checkout functions are demonstrations only. They do not send, store or process customer information or payments.
 
-The package also contains the unchanged existing website files and assets so it may safely be uploaded as a complete replacement. After GitHub finishes processing the commit, allow Cloudflare Pages a few minutes to deploy, then visit sambranotech.com and test the navigation and contact form.
+After GitHub finishes processing the upload, allow Cloudflare Pages a few minutes to deploy. Then test:
+- sambranotech.com/website-development.html
+- sambranotech.com/demo/starter/
+- sambranotech.com/demo/business/
+- sambranotech.com/demo/business-pro/
+- The main contact form and mobile navigation
