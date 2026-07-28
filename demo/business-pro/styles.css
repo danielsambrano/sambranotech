@@ -89,3 +89,9 @@ footer{padding:43px clamp(20px,7vw,108px);display:grid;grid-template-columns:1fr
 @media (max-width: 620px) {
   .people-grid .person-portrait { height: 340px; }
 }
+
+
+/* Preserve the complete hero photograph instead of cropping away parts of it. */
+.hero-visual{min-height:0}
+.hero-visual>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center;background:#dcece6}
+@media(max-width:620px){.hero-visual{min-height:0}.hero-visual>img{height:auto;object-position:center}}
