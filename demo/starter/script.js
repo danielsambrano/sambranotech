@@ -33,3 +33,14 @@ document.querySelector("#demo-form")?.addEventListener("submit", (event) => {
 
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
+
+const backToTop = document.createElement("button");
+backToTop.className = "back-to-top";
+backToTop.type = "button";
+backToTop.setAttribute("aria-label", "Back to top");
+backToTop.innerHTML = '<span aria-hidden="true">↑</span>';
+document.body.appendChild(backToTop);
+const updateBackToTop = () => backToTop.classList.toggle("visible", window.scrollY > 520);
+window.addEventListener("scroll", updateBackToTop, { passive: true });
+backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+updateBackToTop();

@@ -164,3 +164,14 @@ if (enquiryForm) {
     }
   });
 }
+
+const backToTop = document.createElement('button');
+backToTop.className = 'back-to-top';
+backToTop.type = 'button';
+backToTop.setAttribute('aria-label', 'Back to top');
+backToTop.innerHTML = '<span aria-hidden="true">↑</span>';
+document.body.appendChild(backToTop);
+const updateBackToTop = () => backToTop.classList.toggle('visible', window.scrollY > 520);
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+updateBackToTop();

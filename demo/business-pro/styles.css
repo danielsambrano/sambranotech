@@ -95,3 +95,10 @@ footer{padding:43px clamp(20px,7vw,108px);display:grid;grid-template-columns:1fr
 .hero-visual{min-height:0}
 .hero-visual>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center;background:#dcece6}
 @media(max-width:620px){.hero-visual{min-height:0}.hero-visual>img{height:auto;object-position:center}}
+
+/* Distinctive Solara identity, complete hero image and back-to-top navigation */
+.mark{position:relative;overflow:hidden;border-radius:50%;background:radial-gradient(circle at 38% 34%,#2a867d,var(--deep) 62%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.15),0 8px 24px rgba(10,51,51,.2)}
+.mark:after{content:"";width:8px;height:8px;position:absolute;right:7px;top:7px;border-radius:50%;background:var(--copper)}
+.hero-visual>img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;border-radius:32px;background:#dcece6}
+.back-to-top{width:50px;height:50px;position:fixed;right:20px;bottom:20px;z-index:80;border:0;border-radius:50%;background:var(--copper);color:#fff;font-size:1.25rem;box-shadow:var(--shadow);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:.22s ease}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
