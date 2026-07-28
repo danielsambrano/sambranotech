@@ -68,3 +68,24 @@ footer{padding:43px clamp(20px,7vw,108px);display:grid;grid-template-columns:1fr
 .person-portrait img{object-position:center 22%}
 .person:nth-child(2) .person-portrait img{object-position:center 40%}
 @media(max-width:620px){.hero-visual>img{object-position:75% center}}
+
+/* 2026-07-28 practitioner focal-point repair */
+.people-grid .person-portrait {
+  height: 300px;
+}
+.people-grid .person-portrait img {
+  object-fit: cover;
+}
+.people-grid .person:nth-child(1) .person-portrait img {
+  object-position: center 38%;
+}
+.people-grid .person:nth-child(2) .person-portrait img {
+  object-position: center 74%;
+  transform: scale(1.08);
+}
+.people-grid .person:nth-child(3) .person-portrait img {
+  object-position: center 44%;
+}
+@media (max-width: 620px) {
+  .people-grid .person-portrait { height: 340px; }
+}
