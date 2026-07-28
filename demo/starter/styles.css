@@ -75,6 +75,13 @@ h2 { margin-bottom: 22px; font-size: clamp(2.35rem, 4.4vw, 4.7rem); }
 .trust-line { padding: 24px clamp(20px, 7vw, 110px); display: flex; justify-content: center; flex-wrap: wrap; gap: 15px clamp(25px, 5vw, 70px); align-items: center; background: var(--navy); color: #fff; }
 .trust-line span { color: #b9c4d6; font-size: .7rem; text-transform: uppercase; letter-spacing: .18em; }
 .trust-line strong { font-family: "Playfair Display", Georgia, serif; font-size: 1.02rem; }
+.starter-image-feature { position: relative; min-height: clamp(480px, 64vw, 760px); overflow: hidden; background: var(--navy); }
+.starter-image-feature > img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+.starter-image-feature::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13, 27, 50, .9) 0, rgba(13, 27, 50, .72) 38%, rgba(13, 27, 50, .08) 72%); }
+.starter-image-caption { width: min(620px, 86%); position: absolute; z-index: 2; left: clamp(20px, 7vw, 110px); bottom: clamp(38px, 8vw, 95px); color: #fff; }
+.starter-image-caption .eyebrow { color: #ffd2c8; }
+.starter-image-caption h2 { margin-bottom: 16px; font-size: clamp(2.3rem, 4.3vw, 4.5rem); }
+.starter-image-caption p:last-child { max-width: 560px; margin-bottom: 0; color: #dce3ee; font-size: 1.02rem; }
 .section { padding: clamp(78px, 10vw, 145px) clamp(20px, 7vw, 110px); }
 .section-heading { max-width: 760px; }
 .about { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 9vw, 140px); background: var(--paper); }
@@ -151,6 +158,9 @@ footer p { margin: 0; color: #aeb9ca; font-size: .76rem; }
   .hero { padding-top: 70px; }
   h1 { font-size: clamp(2.85rem, 14vw, 4.2rem); }
   .hero-art { min-height: 390px; }
+  .starter-image-feature { min-height: 560px; }
+  .starter-image-feature > img { object-position: 64% center; }
+  .starter-image-feature::after { background: linear-gradient(0deg, rgba(13, 27, 50, .94) 0, rgba(13, 27, 50, .62) 48%, rgba(13, 27, 50, .08) 78%); }
   .shape-one { width: 330px; max-width: 86vw; }
   .shape-two { width: 130px; height: 130px; border-width: 18px; }
   .art-card-main { min-height: 270px; padding: 32px; }
