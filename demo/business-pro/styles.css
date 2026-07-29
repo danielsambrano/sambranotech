@@ -102,3 +102,26 @@ footer{padding:43px clamp(20px,7vw,108px);display:grid;grid-template-columns:1fr
 .hero-visual>img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;border-radius:32px;background:#dcece6}
 .back-to-top{width:50px;height:50px;position:fixed;right:20px;bottom:20px;z-index:80;border:0;border-radius:50%;background:var(--copper);color:#fff;font-size:1.25rem;box-shadow:var(--shadow);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:.22s ease}
 .back-to-top.visible{opacity:1;visibility:visible;transform:none}
+
+
+/* 2026-07-29 final practitioner framing and cache refresh */
+.people-grid .person-portrait{
+  height:clamp(320px,23vw,380px);
+}
+.people-grid .person-portrait img{
+  transform:none;
+}
+.people-grid .person:nth-child(1) .person-portrait img{
+  object-position:center 42%;
+}
+.people-grid .person:nth-child(2) .person-portrait img{
+  object-position:center 37%;
+}
+.people-grid .person:nth-child(3) .person-portrait img{
+  object-position:center 40%;
+}
+@media(max-width:620px){
+  .people-grid .person-portrait{
+    height:clamp(360px,110vw,480px);
+  }
+}
