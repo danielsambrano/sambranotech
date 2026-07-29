@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111111">
+  <title>Sambrano Service Administrator | Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-brand">
+      <div class="brand-mark large">S</div>
+      <p class="eyebrow">Sambrano Technology Services</p>
+      <h1>Service Administrator</h1>
+      <p class="login-intro">Customer, job, inventory and financial management—brought together in one simple workspace.</p>
+      <div class="feature-strip">
+        <span>Customers</span><span>Service history</span><span>Inventory</span><span>Financial reports</span>
+      </div>
+    </div>
+    <div class="login-panel">
+      <form id="loginForm" class="login-card">
+        <span class="demo-pill">Interactive demonstration</span>
+        <h2>Welcome back</h2>
+        <p>Sign in to manage your service operations.</p>
+        <label>Username
+          <input id="username" autocomplete="username" value="ADMIN" required>
+        </label>
+        <label>Password
+          <span class="password-wrap">
+            <input id="password" type="password" autocomplete="current-password" value="ADMIN" required>
+            <button id="togglePassword" type="button" aria-label="Show password">Show</button>
+          </span>
+        </label>
+        <div id="loginError" class="login-error" role="alert"></div>
+        <button class="primary-btn sign-in" type="submit">Sign in</button>
+        <div class="demo-credentials"><strong>Demo access:</strong> ADMIN / ADMIN</div>
+        <p class="fine-print">Fictional information only. No information entered here is uploaded or permanently stored.</p>
+      </form>
+      <div class="login-links">
+        <a class="back-link" href="/">← Return to Sambrano Technology Services</a>
+        <a class="back-link" href="/website-development.html#packages">View other website demos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="appShell" class="app-shell hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark">S</div>
+        <div><strong>Sambrano</strong><small>Service Administrator</small></div>
+      </div>
+      <nav id="mainNav" aria-label="Primary navigation">
+        <button class="nav-link active" data-view="dashboard"><span>⌂</span>Dashboard</button>
+        <button class="nav-link" data-view="customers"><span>◎</span>Customers</button>
+        <button class="nav-link" data-view="jobs"><span>▣</span>Jobs</button>
+        <button class="nav-link" data-view="schedule"><span>□</span>Schedule</button>
+        <button class="nav-link" data-view="inventory"><span>◇</span>Inventory</button>
+        <button class="nav-link" data-view="quotes"><span>▤</span>Quotes & Invoices</button>
+        <button class="nav-link" data-view="payments"><span>▭</span>Payments</button>
+        <button class="nav-link" data-view="reports"><span>↗</span>Reports</button>
+        <button class="nav-link" data-view="employees"><span>♙</span>Employees</button>
+        <button class="nav-link" data-view="settings"><span>⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-footer">
+        <small>Demo workspace</small>
+        <strong>Island AirCare Ltd.</strong>
+        <button id="logoutBtn">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+        <div>
+          <p class="eyebrow">Island AirCare Ltd.</p>
+          <h2 id="pageTitle">Dashboard</h2>
+        </div>
+        <div class="top-actions">
+          <label class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Search customers, jobs or units"></label>
+          <button id="notificationBtn" class="icon-btn" type="button" title="Notifications" aria-label="Open notifications" aria-expanded="false">♢<b class="notification-dot"></b></button>
+          <button id="profileBtn" class="profile-btn" type="button" aria-label="Open user menu" aria-expanded="false"><span>DA</span><div><strong>Daniel Adams</strong><small>Owner</small></div></button>
+        </div>
+        <div id="topPopover" class="top-popover hidden"></div>
+      </header>
+      <div class="demo-banner"><strong>Demo mode</strong><span>Explore freely—changes reset when the page is refreshed.</span><button id="dismissBanner" aria-label="Dismiss">×</button></div>
+      <div id="viewContainer" class="content"></div>
+    </main>
+  </section>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <a class="demo-return" href="/website-development.html#packages" aria-label="Return to website demos">View other demos</a>
+  <script src="app.js"></script>
+</body>
+</html>
